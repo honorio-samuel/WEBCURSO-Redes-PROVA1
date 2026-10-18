@@ -1355,43 +1355,60 @@
         // Initialize Chart.js Bar Chart for Module 2
         function initDelayChart() {
             const ctx = document.getElementById('delayChart').getContext('2d');
+            
+            const dataInitial = {
+                labels: ['Processamento (d_proc)', 'Fila (d_queue)', 'Transmissão (d_trans)', 'Propagação (d_prop)'],
+                datasets: [{
+                    label: 'Atraso em Milissegundos (ms)',
+                    data: [2.5, 5.0, 12.0, 15.0],
+                    backgroundColor: [
+                        'rgba(37, 99, 235, 0.7)',
+                        'rgba(13, 148, 136, 0.7)',
+                        'rgba(245, 158, 11, 0.7)',
+                        'rgba(99, 102, 241, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgb(37, 99, 235)',
+                        'rgb(13, 148, 136)',
+                        'rgb(245, 158, 11)',
+                        'rgb(99, 102, 241)'
+                    ],
+                    borderWidth: 1.5,
+                    borderRadius: 6
+                }]
+            };
+
             delayChartInstance = new Chart(ctx, {
                 type: 'bar',
-                data: {
-                    labels: ['Transmissão (d_trans)', 'Propagação (d_prop)', 'Atraso Total (s)'],
-                    datasets: [{
-                        label: 'Tempo em Segundos',
-                        data: [5.0, 0.15, 5.15],
-                        backgroundColor: [
-                            'rgba(99, 102, 241, 0.85)',
-                            'rgba(20, 184, 166, 0.85)',
-                            'rgba(30, 41, 59, 0.9)'
-                        ],
-                        borderColor: [
-                            'rgb(79, 70, 229)',
-                            'rgb(13, 148, 136)',
-                            'rgb(15, 23, 42)'
-                        ],
-                        borderWidth: 1.5
-                    }]
-                },
+                data: dataInitial,
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 50, // <-- Escala fixa no eixo Y para padronizar a comparação visual
+                            grid: { color: '#f1f5f9' },
+                            ticks: { 
+                                font: { family: 'Inter', size: 11 },
+                                callback: function(value) {
+                                    return value + ' ms';
+                                }
+                            }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { font: { family: 'Inter', size: 11 } }
+                        }
+                    },
                     plugins: {
                         legend: { display: false },
                         tooltip: {
                             callbacks: {
                                 label: function(context) {
-                                    return context.parsed.y.toFixed(2) + ' segundos';
+                                    return ` Atraso: ${context.parsed.y} ms`;
                                 }
                             }
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            title: { display: true, text: 'Segundos (s)' }
                         }
                     }
                 }
