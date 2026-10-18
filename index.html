@@ -100,19 +100,13 @@
     
     <!-- Application Structure Plan:
          Master Crash Course SPA divided into 5 chronological hourly modules mirroring the intensive curriculum.
-         Features:
-         - Visual HTML/CSS rendered mathematical formulas for all delay terms and HTTP latency models.
-         - Top Sticky Header & Progress Bar with time tracking.
-         - Hour 1: Interactive 5-Layer Stack Inspector with Interactive Hoverable/Clickable Protocol Cards.
-         - Hour 2: Live Network Delay Calculator & Store-and-Forward / Pipelining Simulator using Chart.js Canvas with formatted mathematical equations.
-         - Hour 3: Interactive HTTP Workbench with rendered formulas for persistent vs non-persistent connection models.
-         - Hour 4: DNS Distributed Architecture Visualizer & Resource Records.
-         - Hour 5: Transport Layer Comparison (TCP vs UDP) & Interactive Handshake Simulator.
+         Enhanced with detailed theoretical foundations, rich introductory explanations for all modules, and clear mathematical term definitions (L, R, d, s, d_proc, d_queue, RTT).
     -->
 
     <!-- Visualization & Content Choices:
-         - LaTeX replacement: Clean CSS fraction and math formula markup replacing raw LaTeX strings ($d_{trans} = L / R$).
-         - Dynamic updates: JavaScript injects structured HTML for formulas dynamically instead of unparsed math strings.
+         - Visual HTML/CSS rendered mathematical formulas replacing raw LaTeX.
+         - Detailed variables breakdown for all delay equations and latency models.
+         - Expanded textual context for each module explaining fundamental principles, design choices, and real-world implications.
     -->
 
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
@@ -126,10 +120,10 @@
                 </div>
                 <div>
                     <div class="flex items-center gap-2">
-                        <span class="bg-emerald-500/20 text-emerald-400 text-xs px-2 py-0.5 rounded border border-emerald-500/30 font-semibold uppercase tracking-wider">Imersão Total</span>
+                        <span class="bg-emerald-500/20 text-emerald-400 text-xs px-2 py-0.5 rounded border border-emerald-500/30 font-semibold uppercase tracking-wider">Imersão Teórico-Prática</span>
                         <span class="text-xs text-slate-400">IF Sudeste MG / INF02111</span>
                     </div>
-                    <h1 class="text-lg font-bold tracking-tight text-slate-100">Curso Relâmpago: Redes de Computadores (5 Horas)</h1>
+                    <h1 class="text-lg font-bold tracking-tight text-slate-100">Curso Relâmpago: Redes de Computadores (5 Horas Avançado)</h1>
                 </div>
             </div>
 
@@ -139,7 +133,7 @@
                     <span class="w-2 h-2 rounded-full bg-blue-400"></span> H1: Pilha TCP/IP
                 </button>
                 <button onclick="scrollToSection('modulo2')" class="px-3 py-1.5 rounded-md bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white transition whitespace-nowrap font-medium flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-indigo-400"></span> H2: Atraso e Pipelining
+                    <span class="w-2 h-2 rounded-full bg-indigo-400"></span> H2: Atraso & Pipelining
                 </button>
                 <button onclick="scrollToSection('modulo3')" class="px-3 py-1.5 rounded-md bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white transition whitespace-nowrap font-medium flex items-center gap-1.5">
                     <span class="w-2 h-2 rounded-full bg-amber-400"></span> H3: HTTP & Cache
@@ -159,34 +153,34 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div class="lg:col-span-8 space-y-4">
                 <div class="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/20">
-                    <i class="fa-solid fa-graduation-cap"></i> Plano de Formação de Alta Performance • Duração: 05 Horas Improrrogáveis
+                    <i class="fa-solid fa-graduation-cap"></i> Plano de Formação Completo • Teoria Fundamentada & Exercícios Resolvidos
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-                    Arquitetura, Modelagem Matemática e Diagnóstico Prático de Redes
+                    Arquitetura de Redes, Modelagem Matemática Rigorosa e Diagnóstico Prático
                 </h2>
                 <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                    Bem-vindo à nossa aula magna intensiva! Este ambiente de exploração interativa traduz os conceitos teóricos mais profundos em simuladores dinâmicos, cálculos analíticos de latência em milissegundos e ambientes práticos de inspeção de protocolos.
+                    Esta aula magna une o rigor acadêmico da engenharia de redes às demandas de provas técnicas de alto nível (concursos e certificações). Aqui, cada fórmula matemática é formalmente deduzida, cada camada da arquitetura é examinada em seus pormenores conceituais e os mecanismos de protocolos (HTTP, DNS, TCP e UDP) são destrinchados com simulações dinâmicas e parametrizações reais.
                 </p>
                 <div class="flex flex-wrap gap-4 pt-2 text-xs">
                     <div class="bg-slate-800/80 border border-slate-700/60 rounded-lg p-3 flex items-center gap-3">
                         <i class="fa-solid fa-layer-group text-blue-400 text-xl"></i>
                         <div>
-                            <p class="text-slate-400 uppercase tracking-wider text-[10px]">Modelo de Referência</p>
-                            <p class="font-bold text-white">5 Camadas TCP/IP</p>
+                            <p class="text-slate-400 uppercase tracking-wider text-[10px]">Arquitetura em Camadas</p>
+                            <p class="font-bold text-white">Abstração & Encapsulamento</p>
                         </div>
                     </div>
                     <div class="bg-slate-800/80 border border-slate-700/60 rounded-lg p-3 flex items-center gap-3">
                         <i class="fa-solid fa-calculator text-indigo-400 text-xl"></i>
                         <div>
-                            <p class="text-slate-400 uppercase tracking-wider text-[10px]">Modelagem de Desempenho</p>
-                            <p class="font-bold text-white">Store-and-Forward & Pipelining</p>
+                            <p class="text-slate-400 uppercase tracking-wider text-[10px]">Modelagem Quantitativa</p>
+                            <p class="font-bold text-white">Atraso, Banda-Atraso & Pipelining</p>
                         </div>
                     </div>
                     <div class="bg-slate-800/80 border border-slate-700/60 rounded-lg p-3 flex items-center gap-3">
                         <i class="fa-solid fa-terminal text-emerald-400 text-xl"></i>
                         <div>
-                            <p class="text-slate-400 uppercase tracking-wider text-[10px]">Diagnóstico Prático</p>
-                            <p class="font-bold text-white">Wireshark & CLI Lab</p>
+                            <p class="text-slate-400 uppercase tracking-wider text-[10px]">Análise Operacional</p>
+                            <p class="font-bold text-white">Wireshark & Inspeção de Frames</p>
                         </div>
                     </div>
                 </div>
@@ -195,33 +189,33 @@
             <div class="lg:col-span-4 bg-slate-800 border border-slate-700 rounded-xl p-5 shadow-xl relative overflow-hidden">
                 <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
                 <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-3 flex items-center gap-2">
-                    <i class="fa-solid fa-clock text-amber-400"></i> Cronograma da Aula (5 Horas)
+                    <i class="fa-solid fa-clock text-amber-400"></i> Matriz Curricular (5 Horas)
                 </h3>
                 <ol class="relative border-l border-slate-700 ml-2 space-y-3 text-xs">
                     <li class="ml-4">
                         <span class="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full bg-blue-500"></span>
                         <time class="font-mono text-blue-400">00:00 - 01:00</time>
-                        <p class="font-semibold text-slate-200">Pilha TCP/IP & Encapsulamento</p>
+                        <p class="font-semibold text-slate-200">Camadas TCP/IP, Abstração e PDU</p>
                     </li>
                     <li class="ml-4">
                         <span class="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full bg-indigo-500"></span>
                         <time class="font-mono text-indigo-400">01:00 - 02:00</time>
-                        <p class="font-semibold text-slate-200">Atraso, Saltos & Pipelining</p>
+                        <p class="font-semibold text-slate-200">Equações de Atraso e Efeito Pipelining</p>
                     </li>
                     <li class="ml-4">
                         <span class="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full bg-amber-500"></span>
                         <time class="font-mono text-amber-400">02:00 - 03:00</time>
-                        <p class="font-semibold text-slate-200">Camada de Aplicação (HTTP/1.1)</p>
+                        <p class="font-semibold text-slate-200">HTTP/1.1, Persistência, Status & Caching</p>
                     </li>
                     <li class="ml-4">
                         <span class="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full bg-emerald-500"></span>
                         <time class="font-mono text-emerald-400">03:00 - 04:00</time>
-                        <p class="font-semibold text-slate-200">Sistema DNS e Resolução de Nomes</p>
+                        <p class="font-semibold text-slate-200">Arquitetura DNS e Registros de Zona</p>
                     </li>
                     <li class="ml-4">
                         <span class="absolute -left-1.5 mt-1.5 w-3 h-3 rounded-full bg-rose-500"></span>
                         <time class="font-mono text-rose-400">04:00 - 05:00</time>
-                        <p class="font-semibold text-slate-200">Transporte TCP/UDP & Prática CLI</p>
+                        <p class="font-semibold text-slate-200">TCP vs UDP, Handshake e Laboratório CLI</p>
                     </li>
                 </ol>
             </div>
@@ -234,12 +228,22 @@
         <!-- ================================================================= -->
         <!-- MÓDULO 1: PILHA DE PROTOCOLOS E ENCAPSULAMENTO (00:00 - 01:00)   -->
         <!-- ================================================================= -->
-        <section id="modulo1" class="scroll-mt-20">
-            <div class="border-l-4 border-blue-600 pl-4 mb-6">
+        <section id="modulo1" class="scroll-mt-20 space-y-6">
+            <div class="border-l-4 border-blue-600 pl-4">
                 <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Módulo 01 • Hora 01</span>
-                <h2 class="text-2xl font-bold text-slate-900">Arquitetura da Pilha TCP/IP, Encapsulamento e Funções das Camadas</h2>
-                <p class="text-slate-600 text-sm mt-1">
-                    Nesta primeira hora, fundamentamos o princípio de abstração em camadas e como o modelo TCP/IP viabiliza a comunicação global. <strong>Passe o mouse ou toque nos protocolos marcados</strong> em cada camada para abrir a ficha técnica detalhada.
+                <h2 class="text-2xl font-bold text-slate-900">Arquitetura da Pilha TCP/IP, Abstração em Camadas e Encapsulamento</h2>
+            </div>
+
+            <!-- Deep Theoretical Intro Paragraphs -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                    <i class="fa-solid fa-book-open text-blue-600"></i> Fundamentação Teórica: Por que Arquitetar em Camadas?
+                </h3>
+                <p>
+                    A complexidade de interconectar bilhões de dispositivos heterogêneos espalhados pelo planeta exige uma estratégia de projeto baseada no princípio de <strong>divisão e conquista</strong>. Ao modularizar o sistema de rede em uma pilha de camadas, cada camada fica encarregada de executar um conjunto delimitado e específico de funções, oferecendo serviços bem definidos para a camada imediatamente superior e consumindo os serviços da camada imediatamente inferior.
+                </p>
+                <p>
+                    Essa arquitetura garante o <strong>desacoplamento funcional</strong>: uma alteração tecnológica na camada física (como substituir um cabo de cobre UTP por uma fibra óptica monomodo) ou na camada de enlace não exige qualquer modificação na camada de aplicação (como o navegador HTTP) ou de transporte (TCP). Durante a transmissão, os dados gerados pela aplicação atravessam a pilha de cima para baixo no emissor, sofrendo o processo de <strong>encapsulamento</strong>, no qual cada camada adiciona seu próprio cabeçalho contendo metadados de controle (endereços de porta, IPs, endereços MAC, verificação de erros). No receptor, o processo inverso de <strong>desencapsulamento</strong> remove progressivamente esses cabeçalhos até entregar a mensagem original.
                 </p>
             </div>
 
@@ -302,7 +306,7 @@
 
                     <!-- Encapsulation Pipeline Visualizer -->
                     <div class="bg-slate-900 text-slate-200 p-4 rounded-lg text-xs font-mono space-y-2 mt-4">
-                        <p class="text-slate-400 font-sans text-[11px] font-bold uppercase tracking-wider">Visualizador do Fluxo de Encapsulamento</p>
+                        <p class="text-slate-400 font-sans text-[11px] font-bold uppercase tracking-wider">Visualizador de Encapsulamento de PDU</p>
                         <div id="encapsulation-visual" class="space-y-1.5 overflow-x-auto py-1">
                             <!-- Dynamic Content Rendered via JS -->
                         </div>
@@ -330,7 +334,7 @@
                                 <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-semibold">Técnico Judiciário TI</span>
                             </div>
                             <p class="text-xs text-slate-700 leading-relaxed" id="exercise-q1-text">
-                                <strong>Controle de Congestionamento:</strong> Onde atua? O controle de congestionamento de pacotes na arquitetura TCP/IP é de responsabilidade da <strong>Camada de Transporte</strong> (protocolo TCP), e não da camada de rede.
+                                <strong>Controle de Congestionamento:</strong> Onde atua? O controle de congestionamento de pacotes na arquitetura TCP/IP é de responsabilidade da <strong>Camada de Transporte</strong> (protocolo TCP), pois envolve a adaptação da taxa de envio com base na percepção global de perda/atraso da rede, e não da camada de rede (IP), que opera sem estado.
                             </p>
                         </div>
                     </div>
@@ -341,43 +345,82 @@
         <!-- ================================================================= -->
         <!-- MÓDULO 2: ATRASO, STORE-AND-FORWARD E PIPELINING (01:00 - 02:00) -->
         <!-- ================================================================= -->
-        <section id="modulo2" class="scroll-mt-20">
-            <div class="border-l-4 border-indigo-600 pl-4 mb-6">
+        <section id="modulo2" class="scroll-mt-20 space-y-6">
+            <div class="border-l-4 border-indigo-600 pl-4">
                 <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Módulo 02 • Hora 02</span>
                 <h2 class="text-2xl font-bold text-slate-900">Análise Quantitativa do Atraso, Roteamento e Efeito de Pipelining</h2>
-                <p class="text-slate-600 text-sm mt-1">
-                    A latência fim-a-fim é composta por quatro termos: 
-                    <span class="math-formula bg-slate-100 px-2 py-0.5 rounded border border-slate-200 text-xs text-slate-800 mx-1">
-                        d<sub>total</sub> = d<sub>proc</sub> + d<sub>queue</sub> + d<sub>trans</sub> + d<sub>prop</sub>
-                    </span>. Veja abaixo como a fragmentação em pacotes (pipelining) altera dramaticamente o desempenho em topologias de múltiplos saltos.
-                </p>
             </div>
 
-            <!-- Mathematical Formula Banner -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center">
-                    <p class="text-xs text-slate-500 uppercase font-semibold">Atraso de Processamento</p>
-                    <div class="text-xl font-bold text-slate-800 mt-2 font-mono">d<sub>proc</sub></div>
-                    <p class="text-[11px] text-slate-500 mt-2">Exame de cabeçalho e verificação de erros no nó</p>
-                </div>
-                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center">
-                    <p class="text-xs text-slate-500 uppercase font-semibold">Atraso de Fila</p>
-                    <div class="text-xl font-bold text-slate-800 mt-2 font-mono">d<sub>queue</sub></div>
-                    <p class="text-[11px] text-slate-500 mt-2">Tempo de espera no buffer do roteador</p>
-                </div>
-                <div class="bg-white p-4 rounded-xl border border-indigo-200 bg-indigo-50/30 shadow-sm text-center">
-                    <p class="text-xs text-indigo-700 uppercase font-semibold">Atraso de Transmissão</p>
-                    <div class="text-xl font-bold text-indigo-900 mt-1 font-mono math-formula">
-                        d<sub>trans</sub> = <span class="fraction"><span class="numerator">L</span><span class="denominator">R</span></span>
+            <!-- Deep Theoretical Intro Paragraphs -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                    <i class="fa-solid fa-calculator text-indigo-600"></i> Detalhamento Teórico do Atraso Fim-a-Fim e Variáveis Físicas
+                </h3>
+                <p>
+                    O desempenho percebido em uma rede de comutação de pacotes é determinado pelo atraso acumulado à medida que os dados viajam do nó de origem até o destino final. Em um roteador intermediário, o atraso nodal total é expresso matematicamente pela soma de quatro componentes independentes: 
+                    <span class="math-formula bg-slate-100 px-2 py-0.5 rounded border border-slate-200 text-xs font-mono text-slate-900 mx-1">
+                        d<sub>nodal</sub> = d<sub>proc</sub> + d<sub>queue</sub> + d<sub>trans</sub> + d<sub>prop</sub>
+                    </span>.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg space-y-1">
+                        <span class="font-bold text-indigo-900 block text-xs uppercase">1. Atraso de Processamento (d<sub>proc</sub>)</span>
+                        <p class="text-xs leading-normal">Tempo gasto pelo processador do roteador para examinar o cabeçalho do pacote, verificar a integridade dos dados via checksum e consultar a tabela de repasse (forwarding table) para determinar a interface de saída.</p>
                     </div>
-                    <p class="text-[11px] text-indigo-700 mt-2">Tempo para empurrar bits (L) no enlace (R)</p>
-                </div>
-                <div class="bg-white p-4 rounded-xl border border-teal-200 bg-teal-50/30 shadow-sm text-center">
-                    <p class="text-xs text-teal-700 uppercase font-semibold">Atraso de Propagação</p>
-                    <div class="text-xl font-bold text-teal-900 mt-1 font-mono math-formula">
-                        d<sub>prop</sub> = <span class="fraction"><span class="numerator">d</span><span class="denominator">s</span></span>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg space-y-1">
+                        <span class="font-bold text-indigo-900 block text-xs uppercase">2. Atraso de Fila (d<sub>queue</sub>)</span>
+                        <p class="text-xs leading-normal">Tempo que o pacote aguarda na memória buffer da interface de saída até que os pacotes anteriores sejam transmitidos. Depende da intensidade de tráfego <span class="font-mono bg-slate-200 px-1 rounded">(L &middot; a) / R</span>.</p>
                     </div>
-                    <p class="text-[11px] text-teal-700 mt-2">Velocidade física do sinal no meio (s &approx; 2&times;10<sup>8</sup> m/s)</p>
+                </div>
+            </div>
+
+            <!-- Mathematical Terms Definition Banner -->
+            <div class="bg-indigo-950 text-indigo-100 p-6 rounded-xl shadow-md border border-indigo-900 space-y-4">
+                <h4 class="text-xs font-bold text-indigo-300 uppercase tracking-wider flex items-center gap-2">
+                    <i class="fa-solid fa-square-root-variable text-amber-400"></i> Definição Formal de Variáveis e Fórmulas Analíticas
+                </h4>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Transmit Delay Term -->
+                    <div class="bg-indigo-900/60 p-4 rounded-lg border border-indigo-800 space-y-2">
+                        <div class="flex items-center justify-between border-b border-indigo-800 pb-1.5">
+                            <span class="font-bold text-white text-sm">Atraso de Transmissão (d<sub>trans</sub>)</span>
+                            <span class="font-mono text-amber-300 text-xs math-formula">d<sub>trans</sub> = <span class="fraction"><span class="numerator">L</span><span class="denominator">R</span></span></span>
+                        </div>
+                        <p class="text-xs text-indigo-200 leading-relaxed">
+                            É o tempo necessário para empurrar (converter) todos os bits de um pacote para o meio de transmissão físico. É uma função puramente digital que depende da largura de banda da placa de rede ou interface do roteador.
+                        </p>
+                        <ul class="text-xs font-mono space-y-1 text-amber-200/90 pt-1 border-t border-indigo-800/80">
+                            <li><strong class="text-white">L (Bits):</strong> Comprimento ou tamanho do pacote em bits (ex: 10 Mbits = 10.000.000 bits).</li>
+                            <li><strong class="text-white">R (bps):</strong> Taxa de transmissão (largura de banda/capacidade do enlace) em bits por segundo (ex: 10 Mbps = 10.000.000 bps).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Propagation Delay Term -->
+                    <div class="bg-indigo-900/60 p-4 rounded-lg border border-indigo-800 space-y-2">
+                        <div class="flex items-center justify-between border-b border-indigo-800 pb-1.5">
+                            <span class="font-bold text-white text-sm">Atraso de Propagação (d<sub>prop</sub>)</span>
+                            <span class="font-mono text-emerald-300 text-xs math-formula">d<sub>prop</sub> = <span class="fraction"><span class="numerator">d</span><span class="denominator">s</span></span></span>
+                        </div>
+                        <p class="text-xs text-indigo-200 leading-relaxed">
+                            É o tempo gasto por um único bit para viajar fisicamente do início do meio de transmissão até a outra extremidade do cabo ou enlace de rádio. É uma função puramente física relacionada à velocidade da luz no meio.
+                        </p>
+                        <ul class="text-xs font-mono space-y-1 text-emerald-200/90 pt-1 border-t border-indigo-800/80">
+                            <li><strong class="text-white">d (Metros):</strong> Distância física do enlace em metros entre dois nós (ex: 30.000 km = 30.000.000 m).</li>
+                            <li><strong class="text-white">s (m/s):</strong> Velocidade de propagação do sinal eletromagnético no meio físico (s &approx; 2&times;10<sup>8</sup> m/s em cabos de cobre/fibra e 3&times;10<sup>8</sup> m/s no vácuo).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pipelining Formula Breakdown -->
+                <div class="bg-indigo-900/40 p-4 rounded-lg border border-indigo-800/80 text-xs space-y-2">
+                    <span class="font-bold text-white block">Equação de Pipelining Multi-Salto Homogêneo (Fragmentação de Mensagem):</span>
+                    <p class="text-indigo-200 leading-relaxed">
+                        Quando uma mensagem de tamanho total <span class="font-mono font-bold text-white">F</span> é dividida em <span class="font-mono font-bold text-white">N</span> pacotes menores de tamanho <span class="font-mono font-bold text-white">L = F / N</span> e transmitida através de <span class="font-mono font-bold text-white">k</span> enlaces homogêneos encadeados, o tempo total de entrega é dado por:
+                    </p>
+                    <div class="p-2 bg-indigo-950 rounded border border-indigo-700 text-center font-mono text-amber-300 text-xs math-formula">
+                        d<sub>total</sub> = (N &times; t<sub>trans_p</sub>) + (k &times; d<sub>prop</sub>) + ((k - 1) &times; t<sub>trans_p</sub>)
+                    </div>
                 </div>
             </div>
 
@@ -441,7 +484,7 @@
                             <i class="fa-solid fa-lightbulb text-amber-500"></i> Conclusão Fundamental de Engenharia de Redes:
                         </p>
                         <p id="scen-takeaway" class="text-indigo-900/90 leading-snug">
-                            O número de saltos (roteadores no caminho) impacta o atraso total substancialmente mais do que a distância física linear!
+                            O número de saltos (roteadores intermediários operando em modo Store-and-Forward) impacta o atraso total substancialmente mais do que a distância física linear!
                         </p>
                     </div>
                 </div>
@@ -452,12 +495,22 @@
         <!-- ================================================================= -->
         <!-- MÓDULO 3: CAMADA DE APLICAÇÃO - HTTP, CACHING E COOKIES (02:00 - 03:00) -->
         <!-- ================================================================= -->
-        <section id="modulo3" class="scroll-mt-20">
-            <div class="border-l-4 border-amber-500 pl-4 mb-6">
+        <section id="modulo3" class="scroll-mt-20 space-y-6">
+            <div class="border-l-4 border-amber-500 pl-4">
                 <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Módulo 03 • Hora 03</span>
                 <h2 class="text-2xl font-bold text-slate-900">Protocolos Web: HTTP/1.1, Conexões Persistentes, Status Codes & Caching</h2>
-                <p class="text-slate-600 text-sm mt-1">
-                    Análise do modelo cliente-servidor na web. Entenda a diferença de tempo de resposta entre conexões não persistentes e persistentes, manipulação de cookies e otimização por GET Condicional.
+            </div>
+
+            <!-- Deep Theoretical Intro Paragraphs -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                    <i class="fa-solid fa-globe text-amber-600"></i> Arquitetura e Evolução da Comunicação na Web
+                </h3>
+                <p>
+                    O <strong>HTTP (Hypertext Transfer Protocol)</strong> é um protocolo da camada de aplicação baseado no modelo cliente-servidor. O cliente (geralmente um navegador web) estabelece uma conexão de transporte e envia uma mensagem de requisição estruturada contendo um método (GET, POST, PUT, DELETE), URI e cabeçalhos. O servidor responde com um código de status de 3 dígitos, metadados e o objeto solicitado (HTML, imagem, vídeo ou JSON).
+                </p>
+                <p>
+                    O HTTP é inerentemente <strong>sem estado (stateless)</strong>, ou seja, o servidor não guarda memória de requisições anteriores do mesmo cliente. Para contornar essa limitação em aplicações modernas e permitir autenticação e carrinhos de compras, utilizam-se <strong>Cookies</strong> (cabeçalhos <span class="font-mono text-xs bg-slate-100 px-1 rounded">Set-Cookie</span> e <span class="font-mono text-xs bg-slate-100 px-1 rounded">Cookie</span>). Além disso, a evolução do HTTP/1.0 para o HTTP/1.1 substituiu o modelo ineficiente de conexões não persistentes (onde cada objeto exigia um novo Handshake TCP de 2 RTTs) pelo modelo de <strong>conexões persistentes</strong>, reduzindo dramaticamente a latência percebida pelo usuário e a sobrecarga em servidores.
                 </p>
             </div>
 
@@ -576,12 +629,22 @@
         <!-- ================================================================= -->
         <!-- MÓDULO 4: SISTEMA DE NOMES DE DOMÍNIO - DNS (03:00 - 04:00)       -->
         <!-- ================================================================= -->
-        <section id="modulo4" class="scroll-mt-20">
-            <div class="border-l-4 border-emerald-600 pl-4 mb-6">
+        <section id="modulo4" class="scroll-mt-20 space-y-6">
+            <div class="border-l-4 border-emerald-600 pl-4">
                 <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Módulo 04 • Hora 04</span>
                 <h2 class="text-2xl font-bold text-slate-900">Sistema de Nomes de Domínio (DNS): Arquitetura Distribuída & Registros</h2>
-                <p class="text-slate-600 text-sm mt-1">
-                    O DNS é o banco de dados distribuído e hierárquico encarregado de traduzir nomes de host legíveis por humanos em endereços IP de 32 bits (IPv4) ou 128 bits (IPv6).
+            </div>
+
+            <!-- Deep Theoretical Intro Paragraphs -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                    <i class="fa-solid fa-server text-emerald-600"></i> Fundamentos e Necessidade da Hierarquia DNS
+                </h3>
+                <p>
+                    Enquanto os seres humanos preferem nomes mnemônicos alfanuméricos como <span class="font-mono text-xs bg-slate-100 px-1 rounded">cefetmg.br</span>, os roteadores e a camada de rede operam estritamente sobre endereços IP numéricos de tamanho fixo (32 bits no IPv4 ou 128 bits no IPv6). O <strong>DNS (Domain Name System)</strong> atua como a infraestrutura crítica responsável por essa tradução bidirecional.
+                </p>
+                <p>
+                    O DNS adota uma arquitetura de <strong>banco de dados distribuído e hierárquico</strong> estruturado em árvore. No topo estão os 13 conjuntos de servidores <strong>Raiz (Root)</strong>, seguidos pelos servidores de domínios de nível superior (<strong>TLD - Top Level Domain</strong>, como .br, .com, .edu) e, finalmente, pelos servidores <strong>Autoritativos</strong> de cada organização. Essa descentralização elimina qualquer Ponto Único de Falha, reduz o gargalo de tráfego e permite a delegação administrativa local de zonas.
                 </p>
             </div>
 
@@ -705,12 +768,23 @@
         <!-- ================================================================= -->
         <!-- MÓDULO 5: TRANSPORTE, DIAGNÓSTICO E LAB PRÁTICO (04:00 - 05:00)   -->
         <!-- ================================================================= -->
-        <section id="modulo5" class="scroll-mt-20">
-            <div class="border-l-4 border-rose-600 pl-4 mb-6">
+        <section id="modulo5" class="scroll-mt-20 space-y-6">
+            <div class="border-l-4 border-rose-600 pl-4">
                 <span class="text-xs font-bold uppercase tracking-wider text-rose-600">Módulo 05 • Hora 05</span>
                 <h2 class="text-2xl font-bold text-slate-900">Camada de Transporte, Handshake TCP e Laboratório Prático de CLI & Wireshark</h2>
-                <p class="text-slate-600 text-sm mt-1">
-                    Concluímos com o contraste entre TCP e UDP, a simulação interativa do algoritmo 3-Way Handshake e a execução prática de comandos de diagnóstico no terminal com filtros avançados do Wireshark.
+            </div>
+
+            <!-- Deep Theoretical Intro Paragraphs -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-rose-600"></i> Mecanismos Fundamentais da Camada de Transporte
+                </h3>
+                <p>
+                    A camada de transporte fornece uma comunicação lógica direta entre <strong>processos de aplicação</strong> em execução em hosts distintos (diferente da camada de rede, que comunica hosts). Isso é viabilizado pelo conceito de <strong>Multiplexação e Demultiplexação por Números de Porta Lógica</strong> (portas de 0 a 65535).
+                </p>
+                <p>
+                    A escolha entre os dois principais protocolos da camada define o perfil de transporte:
+                    o <strong>TCP (Transmission Control Protocol)</strong> prioriza a <i>confiabilidade absoluta</i> através de estabelecimento de conexão prévio (3-Way Handshake), numeração de sequência, confirmações (ACKs), retransmissões temporizadas (ARQ) e janelas deslizantes para controle de fluxo e congestionamento. Já o <strong>UDP (User Datagram Protocol)</strong> prioriza a <i>velocidade e baixa latência</i>, operando sem conexão (connectionless), sem garantias de ordem ou retransmissão, sendo ideal para serviços em tempo real como DNS, VoIP e chamadas de vídeo.
                 </p>
             </div>
 
@@ -881,7 +955,7 @@
                 <div class="space-y-2 text-xs">
                     <p class="font-bold text-slate-800 text-sm">2. Qual o comportamento de um servidor Web ao receber uma requisição HTTP com `If-Modified-Since` para um recurso mantido em cache local que NÃO foi alterado?</p>
                     <div class="space-y-1">
-                        <button onclick="answerQuiz(2, 'a')" class="w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition" id="q2-opt-a">A) Retorna código 200 OK com todo o arquivo retransmitido.</button>
+                        <button onclick="answerQuiz(2, 'a')" class="w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition" id="q2-opt-a">A) Retorna código 200 OK com todo o arquivo retransmitted.</button>
                         <button onclick="answerQuiz(2, 'b')" class="w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition" id="q2-opt-b">B) Retorna código 404 Not Found.</button>
                         <button onclick="answerQuiz(2, 'c')" class="w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition font-bold" id="q2-opt-c">C) Retorna código 304 Not Modified sem o corpo da mensagem, economizando banda.</button>
                     </div>
@@ -1132,9 +1206,9 @@
                 totalTime: "5.15 s",
                 transTime: 5.0,
                 propTime: 0.15,
-                params: "F = 50 Mbits (1 pacote) | R = 10 Mbps | d = 30.000 km | s = 2&times;10<sup>8</sup> m/s",
-                desc: "<b>Cálculos Executados:</b><br>&bull; Transmissão: <span class='math-formula'>d<sub>trans</sub> = <span class='fraction'><span class='numerator'>50 Mb</span><span class='denominator'>10 Mbps</span></span> = <b>5,00 s</b></span><br>&bull; Propagação: <span class='math-formula'>d<sub>prop</sub> = <span class='fraction'><span class='numerator'>30.000.000 m</span><span class='denominator'>2&times;10<sup>8</sup> m/s</span></span> = <b>0,15 s</b></span><br>&bull; Atraso Total: 5,00s + 0,15s = <b>5,15 s</b>",
-                takeaway: "Sem roteadores intermediários, o atraso de transmissão do arquivo inteiro domina o tempo total de resposta."
+                params: "F = 50 Mbits (L = 50.000.000 bits) | R = 10 Mbps (10.000.000 bps) | d = 30.000 km | s = 2&times;10<sup>8</sup> m/s",
+                desc: "<b>Detalhamento Passo-a-Passo dos Cálculos:</b><br>&bull; <b>Atraso de Transmissão (d<sub>trans</sub>):</b><br><span class='math-formula my-1'>d<sub>trans</sub> = <span class='fraction'><span class='numerator'>L</span><span class='denominator'>R</span></span> = <span class='fraction'><span class='numerator'>50.000.000 bits</span><span class='denominator'>10.000.000 bps</span></span> = <b>5,00 s</b></span><br>&bull; <b>Atraso de Propagação (d<sub>prop</sub>):</b><br><span class='math-formula my-1'>d<sub>prop</sub> = <span class='fraction'><span class='numerator'>d</span><span class='denominator'>s</span></span> = <span class='fraction'><span class='numerator'>30.000.000 m</span><span class='denominator'>200.000.000 m/s</span></span> = <b>0,15 s</b></span><br>&bull; <b>Tempo Total de Entrega:</b> 5,00s + 0,15s = <b>5,15 s</b>",
+                takeaway: "Sem roteadores intermediários (sem saltos), o tempo de transmissão d_trans para converter o arquivo L no enlace R domina o tempo de resposta."
             },
             2: {
                 title: "Q2: Pipelining em 2 Enlaces Heterogêneos (3 Pacotes)",
@@ -1142,9 +1216,9 @@
                 totalTime: "3.65 s",
                 transTime: 3.1,
                 propTime: 0.55,
-                params: "F = 30 Mbits (3 pkts de 10Mb) | Link 1: 10Mbps (30k km) | Link 2: 100Mbps (80k km)",
-                desc: "<b>Cálculos Executados:</b><br>&bull; Pacote 3 sai da fonte em t = 3.0s<br>&bull; Chega ao Roteador 1 em 3.15s (<span class='math-formula'>d<sub>prop1</sub> = 0,15s</span>)<br>&bull; Retransmissão no Link 2 (100Mbps): <span class='math-formula'>d<sub>trans2</sub> = <span class='fraction'><span class='numerator'>10 Mb</span><span class='denominator'>100 Mbps</span></span> = 0,10s</span><br>&bull; Propagação no Link 2: <span class='math-formula'>d<sub>prop2</sub> = <span class='fraction'><span class='numerator'>80.000 km</span><span class='denominator'>200.000 km/s</span></span> = 0,40s</span><br>&bull; Chegada ao Destino: 3,15s + 0,10s + 0,40s = <b>3,65 s</b>",
-                takeaway: "Como R2 (100Mbps) > R1 (10Mbps), o roteador processa mais rápido do que recebe, eliminando totalmente a fila (d_queue = 0)!"
+                params: "F = 30 Mbits (N=3 pacotes de L=10Mb) | Link 1: R1=10Mbps (d1=30k km) | Link 2: R2=100Mbps (d2=80k km)",
+                desc: "<b>Detalhamento do Pipelining Heterogêneo:</b><br>&bull; O Pacote 3 é transmitido pela fonte em t = 2,0s a 3,0s.<br>&bull; Chega ao Roteador 1 em 3,15s após propagar no Link 1 (<span class='math-formula'>d<sub>prop1</sub> = 0,15s</span>).<br>&bull; Retransmissão no Link 2 (100Mbps): <span class='math-formula'>d<sub>trans2</sub> = <span class='fraction'><span class='numerator'>10 Mb</span><span class='denominator'>100 Mbps</span></span> = 0,10s</span><br>&bull; Propagação no Link 2: <span class='math-formula'>d<sub>prop2</sub> = <span class='fraction'><span class='numerator'>80.000 km</span><span class='denominator'>200.000 km/s</span></span> = 0,40s</span><br>&bull; Tempo Total = 3,15s + 0,10s + 0,40s = <b>3,65 s</b>",
+                takeaway: "Como R2 (100Mbps) > R1 (10Mbps), o roteador consome a fila mais rápido do que ela se forma. Atraso de fila d_queue = 0!"
             },
             3: {
                 title: "Q3: Pipelining Homogêneo em 3 Enlaces (5 Pacotes)",
@@ -1152,9 +1226,9 @@
                 totalTime: "7.45 s",
                 transTime: 7.0,
                 propTime: 0.45,
-                params: "F = 50 Mbits (5 pkts de 10Mb) | 3 Enlaces: 10 Mbps cada | d = 30.000 km cada",
-                desc: "<b>Fórmula do Pipelining Multi-salto:</b><br><div class='my-1 border-l-2 border-indigo-400 pl-2 font-mono text-[11px] math-formula'>d<sub>total</sub> = (N &times; t<sub>trans_p</sub>) + (k &times; d<sub>prop</sub>) + ((k - 1) &times; t<sub>trans_p</sub>)</div>&bull; Onde N = 5 pacotes, k = 3 enlaces, t<sub>trans_p</sub> = 1,0s, d<sub>prop</sub> = 0,15s<br>&bull; Cálculo: (5 &times; 1.0s) + (3 &times; 0.15s) + (2 &times; 1.0s) = 5.0s + 0.45s + 2.0s = <b>7,45 s</b>",
-                takeaway: "O paralelismo do pipelining permite enviar o próximo pacote enquanto o roteador transmite o pacote anterior!"
+                params: "F = 50 Mbits (N=5 pacotes de L=10Mb) | 3 Enlaces: R=10 Mbps cada | d = 30.000 km cada",
+                desc: "<b>Fórmula Analítica Aplicada:</b><br><div class='my-1 border-l-2 border-indigo-400 pl-2 font-mono text-[11px] math-formula'>d<sub>total</sub> = (N &times; t<sub>trans_p</sub>) + (k &times; d<sub>prop</sub>) + ((k - 1) &times; t<sub>trans_p</sub>)</div>&bull; Onde N = 5 pacotes, k = 3 enlaces, L = 10Mb &rarr; t<sub>trans_p</sub> = 1,0s, d<sub>prop</sub> = 0,15s<br>&bull; Cálculo: (5 &times; 1,0s) + (3 &times; 0,15s) + (2 &times; 1,0s) = 5,0s + 0,45s + 2,0s = <b>7,45 s</b>",
+                takeaway: "A fragmentação em pacotes menores (pipelining) permite o paralelismo espacial na rede, reduzindo dramaticamente a latência frente ao arquivo indivisível."
             },
             4: {
                 title: "Q4: Pipelining em 5 Enlaces Curtos (5 Pacotes)",
@@ -1162,9 +1236,9 @@
                 totalTime: "9.25 s",
                 transTime: 9.0,
                 propTime: 0.25,
-                params: "F = 50 Mbits (5 pkts de 10Mb) | 5 Enlaces: 10 Mbps cada | d = 10.000 km cada",
-                desc: "<b>Fórmula dos 5 Saltos:</b><br>&bull; <span class='math-formula'>d<sub>total</sub> = (5 &times; 1.0s) + (5 &times; 0.05s) + (4 &times; 1.0s) = 5.0s + 0.25s + 4.0s = <b>9,25 s</b></span><br>&bull; Comparação com Q3: A distância física total caiu de 90.000 km para 50.000 km, porém o tempo aumentou de 7,45s para 9,25s!",
-                takeaway: "A quantidade de saltos (store-and-forward em roteadores) tem peso maior no atraso total do que a distância física linear!"
+                params: "F = 50 Mbits (N=5 pacotes de L=10Mb) | 5 Enlaces: R=10 Mbps cada | d = 10.000 km cada",
+                desc: "<b>Cálculo com k = 5 Enlaces:</b><br>&bull; <span class='math-formula'>d<sub>total</sub> = (5 &times; 1,0s) + (5 &times; 0,05s) + (4 &times; 1,0s) = 5,0s + 0,25s + 4,0s = <b>9,25 s</b></span><br>&bull; <b>Análise Comparativa com Q3:</b> Embora a distância física total tenha caído de 90.000 km para 50.000 km, o tempo total subiu de 7,45s para 9,25s por conta dos 2 saltos adicionais!",
+                takeaway: "A quantidade de saltos intermediários com armazenador-e-retransmissor (Store-and-Forward) pesa mais na latência final do que a distância geográfica linear!"
             }
         };
 
