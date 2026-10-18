@@ -59,6 +59,31 @@
             background: #94a3b8;
         }
 
+        /* Math Formula Render Styling */
+        .math-formula {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fira Code', monospace;
+            font-weight: 600;
+        }
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            vertical-align: middle;
+            text-align: center;
+            padding: 0 4px;
+        }
+        .fraction .numerator {
+            border-bottom: 2px solid currentColor;
+            padding-bottom: 1px;
+            line-height: 1.1;
+        }
+        .fraction .denominator {
+            padding-top: 1px;
+            line-height: 1.1;
+        }
+
         /* Hover Protocol Card Styling */
         .protocol-pill {
             transition: all 0.2s ease-in-out;
@@ -76,22 +101,18 @@
     <!-- Application Structure Plan:
          Master Crash Course SPA divided into 5 chronological hourly modules mirroring the intensive curriculum.
          Features:
+         - Visual HTML/CSS rendered mathematical formulas for all delay terms and HTTP latency models.
          - Top Sticky Header & Progress Bar with time tracking.
-         - Hour 1: Interactive 5-Layer Stack Inspector with Interactive Hoverable/Clickable Protocol Cards (detailing Port, RFC, Function & Real-world Usage), PDU encapsulation flow & TRF3 Exam exercise resolution.
-         - Hour 2: Live Network Delay Calculator & Store-and-Forward / Pipelining Simulator using Chart.js Canvas. Exact breakdown of 4 complex multi-hop scenarios.
-         - Hour 3: Interactive HTTP Workbench (Persistent vs Non-Persistent RTT calculator, Status Code Inspector 1xx-5xx, Conditional GET simulator, Cookie Session state machine).
-         - Hour 4: DNS Distributed Architecture Visualizer, Hierarchical Lookup Flow (Client -> Recursive -> Root -> TLD -> Authoritative), Resource Records (A, AAAA, CNAME, MX, NS, PTR) lookup demo.
-         - Hour 5: Transport Layer Comparison (TCP vs UDP), Step-by-Step Interactive TCP 3-Way Handshake State Machine, Simulated Diagnostic CLI Workbench (ping, traceroute, dig, nslookup, curl, netstat) and Wireshark Display Filter Builder.
-         - End-of-Course Final Master Quiz & Knowledge Matrix.
+         - Hour 1: Interactive 5-Layer Stack Inspector with Interactive Hoverable/Clickable Protocol Cards.
+         - Hour 2: Live Network Delay Calculator & Store-and-Forward / Pipelining Simulator using Chart.js Canvas with formatted mathematical equations.
+         - Hour 3: Interactive HTTP Workbench with rendered formulas for persistent vs non-persistent connection models.
+         - Hour 4: DNS Distributed Architecture Visualizer & Resource Records.
+         - Hour 5: Transport Layer Comparison (TCP vs UDP) & Interactive Handshake Simulator.
     -->
 
     <!-- Visualization & Content Choices:
-         - 5-Layer Stack -> Interactive Dynamic Tabs & PDU Encapsulation Card -> Hoverable Protocol Badges triggering real-time detail popover cards -> Vanilla JS state -> No SVG.
-         - Network Delays & Pipelining -> Chart.js Bar Chart showing Transmission vs Propagation vs Total Delay + Interactive Parametric Inputs -> Canvas Chart rendering.
-         - HTTP Status & Header Sandbox -> Dynamic Filterable Code Cards + Interactive Terminal Simulation -> Vanilla JS DOM manipulation.
-         - DNS Hierarchical Chain -> Step-by-step Interactive Node Highlighting -> Tailwind Styled Flex Grid + JS click handlers.
-         - TCP 3-Way Handshake -> Dynamic State Machine Diagram -> HTML/CSS timeline with active packet animations -> Vanilla JS.
-         - Wireshark Filters & CLI Sandbox -> Interactive Shell Emulator with real-time output preview -> Vanilla JS string matching.
+         - LaTeX replacement: Clean CSS fraction and math formula markup replacing raw LaTeX strings ($d_{trans} = L / R$).
+         - Dynamic updates: JavaScript injects structured HTML for formulas dynamically instead of unparsed math strings.
     -->
 
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
@@ -325,7 +346,10 @@
                 <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Módulo 02 • Hora 02</span>
                 <h2 class="text-2xl font-bold text-slate-900">Análise Quantitativa do Atraso, Roteamento e Efeito de Pipelining</h2>
                 <p class="text-slate-600 text-sm mt-1">
-                    A latência fim-a-fim é composta por quatro termos: $d_{total} = d_{proc} + d_{queue} + d_{trans} + d_{prop}$. Veja abaixo como a fragmentação em pacotes (pipelining) altera dramaticamente o desempenho em topologias de múltiplos saltos.
+                    A latência fim-a-fim é composta por quatro termos: 
+                    <span class="math-formula bg-slate-100 px-2 py-0.5 rounded border border-slate-200 text-xs text-slate-800 mx-1">
+                        d<sub>total</sub> = d<sub>proc</sub> + d<sub>queue</sub> + d<sub>trans</sub> + d<sub>prop</sub>
+                    </span>. Veja abaixo como a fragmentação em pacotes (pipelining) altera dramaticamente o desempenho em topologias de múltiplos saltos.
                 </p>
             </div>
 
@@ -333,23 +357,27 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                 <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center">
                     <p class="text-xs text-slate-500 uppercase font-semibold">Atraso de Processamento</p>
-                    <p class="text-xl font-bold text-slate-800 mt-1 font-mono">$d_{proc}$</p>
-                    <p class="text-[11px] text-slate-500 mt-1">Exame de cabeçalho e verificação de erros no nó</p>
+                    <div class="text-xl font-bold text-slate-800 mt-2 font-mono">d<sub>proc</sub></div>
+                    <p class="text-[11px] text-slate-500 mt-2">Exame de cabeçalho e verificação de erros no nó</p>
                 </div>
                 <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center">
                     <p class="text-xs text-slate-500 uppercase font-semibold">Atraso de Fila</p>
-                    <p class="text-xl font-bold text-slate-800 mt-1 font-mono">$d_{queue}$</p>
-                    <p class="text-[11px] text-slate-500 mt-1">Tempo de espera no buffer do roteador</p>
+                    <div class="text-xl font-bold text-slate-800 mt-2 font-mono">d<sub>queue</sub></div>
+                    <p class="text-[11px] text-slate-500 mt-2">Tempo de espera no buffer do roteador</p>
                 </div>
                 <div class="bg-white p-4 rounded-xl border border-indigo-200 bg-indigo-50/30 shadow-sm text-center">
                     <p class="text-xs text-indigo-700 uppercase font-semibold">Atraso de Transmissão</p>
-                    <p class="text-xl font-bold text-indigo-900 mt-1 font-mono">$d_{trans} = \frac{L}{R}$</p>
-                    <p class="text-[11px] text-indigo-700 mt-1">Tempo para empurrar bits ($L$) no enlace ($R$)</p>
+                    <div class="text-xl font-bold text-indigo-900 mt-1 font-mono math-formula">
+                        d<sub>trans</sub> = <span class="fraction"><span class="numerator">L</span><span class="denominator">R</span></span>
+                    </div>
+                    <p class="text-[11px] text-indigo-700 mt-2">Tempo para empurrar bits (L) no enlace (R)</p>
                 </div>
                 <div class="bg-white p-4 rounded-xl border border-teal-200 bg-teal-50/30 shadow-sm text-center">
                     <p class="text-xs text-teal-700 uppercase font-semibold">Atraso de Propagação</p>
-                    <p class="text-xl font-bold text-teal-900 mt-1 font-mono">$d_{prop} = \frac{d}{s}$</p>
-                    <p class="text-[11px] text-teal-700 mt-1">Velocidade física do sinal no meio ($s \approx 2\times 10^8 \text{m/s}$)</p>
+                    <div class="text-xl font-bold text-teal-900 mt-1 font-mono math-formula">
+                        d<sub>prop</sub> = <span class="fraction"><span class="numerator">d</span><span class="denominator">s</span></span>
+                    </div>
+                    <p class="text-[11px] text-teal-700 mt-2">Velocidade física do sinal no meio (s &approx; 2&times;10<sup>8</sup> m/s)</p>
                 </div>
             </div>
 
@@ -469,13 +497,17 @@
                             <div class="bg-rose-50 border border-rose-200 p-3 rounded-lg">
                                 <p class="text-[11px] font-bold text-rose-800 uppercase">HTTP/1.0 Não Persistente</p>
                                 <p class="text-2xl font-extrabold text-rose-950 mt-1 font-mono" id="non-persistent-time">4.00 s</p>
-                                <p class="text-[10px] text-rose-700 mt-1 font-mono">Fórmula: $N \times (2 \cdot RTT + d_{trans})$</p>
-                                <p class="text-[11px] text-rose-800 mt-1">Abre/Fecha TCP para cada objeto ($N$ vezes).</p>
+                                <div class="text-[11px] text-rose-700 mt-1 font-mono math-formula">
+                                    N &times; (2 &times; RTT + d<sub>trans</sub>)
+                                </div>
+                                <p class="text-[11px] text-rose-800 mt-1">Abre/Fecha TCP para cada objeto (N vezes).</p>
                             </div>
                             <div class="bg-emerald-50 border border-emerald-200 p-3 rounded-lg">
                                 <p class="text-[11px] font-bold text-emerald-800 uppercase">HTTP/1.1 Persistente</p>
                                 <p class="text-2xl font-extrabold text-emerald-950 mt-1 font-mono" id="persistent-time">2.10 s</p>
-                                <p class="text-[10px] text-emerald-700 mt-1 font-mono">Fórmula: $1\cdot RTT_{conn} + N \cdot (RTT + d_{trans})$</p>
+                                <div class="text-[11px] text-emerald-700 mt-1 font-mono math-formula">
+                                    1 &times; RTT<sub>conn</sub> + N &times; (RTT + d<sub>trans</sub>)
+                                </div>
                                 <p class="text-[11px] text-emerald-800 mt-1">Reutiliza a mesma conexão TCP aberta.</p>
                             </div>
                         </div>
@@ -738,17 +770,17 @@
                         <!-- Animated Message Container -->
                         <div class="py-2 space-y-2">
                             <div id="hs-msg-1" class="p-2 rounded bg-blue-950 border border-blue-700 text-blue-200 flex justify-between items-center">
-                                <span>1. CLIENTE → SERVIDOR: <strong class="text-amber-400">SYN = 1</strong>, seq = 1000</span>
+                                <span>1. CLIENTE &rarr; SERVIDOR: <strong class="text-amber-400">SYN = 1</strong>, seq = 1000</span>
                                 <span class="text-[10px] bg-blue-900 px-1.5 py-0.5 rounded">Estado: SYN-SENT</span>
                             </div>
 
                             <div id="hs-msg-2" class="p-2 rounded bg-slate-800 text-slate-500 opacity-40 flex justify-between items-center transition">
-                                <span>2. SERVIDOR → CLIENTE: <strong class="text-amber-400">SYN = 1, ACK = 1</strong>, seq = 5000, ack = 1001</span>
+                                <span>2. SERVIDOR &rarr; CLIENTE: <strong class="text-amber-400">SYN = 1, ACK = 1</strong>, seq = 5000, ack = 1001</span>
                                 <span class="text-[10px] bg-slate-700 px-1.5 py-0.5 rounded">Estado: SYN-RCVD</span>
                             </div>
 
                             <div id="hs-msg-3" class="p-2 rounded bg-slate-800 text-slate-500 opacity-40 flex justify-between items-center transition">
-                                <span>3. CLIENTE → SERVIDOR: <strong class="text-amber-400">ACK = 1</strong>, seq = 1001, ack = 5001</span>
+                                <span>3. CLIENTE &rarr; SERVIDOR: <strong class="text-amber-400">ACK = 1</strong>, seq = 1001, ack = 5001</span>
                                 <span class="text-[10px] bg-emerald-900 text-emerald-200 px-1.5 py-0.5 rounded font-bold">ESTABLISHED</span>
                             </div>
                         </div>
@@ -836,10 +868,10 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Question 1 -->
                 <div class="space-y-2 text-xs">
-                    <p class="font-bold text-slate-800 text-sm">1. O que acontece com o atraso de fila ($d_{queue}$) no roteador quando a taxa do enlace de saída é estritamente maior que a do enlace de entrada ($R_2 > R_1$)?</p>
+                    <p class="font-bold text-slate-800 text-sm">1. O que acontece com o atraso de fila (d<sub>queue</sub>) no roteador quando a taxa do enlace de saída é estritamente maior que a do enlace de entrada (R<sub>2</sub> &gt; R<sub>1</sub>)?</p>
                     <div class="space-y-1">
                         <button onclick="answerQuiz(1, 'a')" class="w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition" id="q1-opt-a">A) O atraso de fila cresce infinitamente.</button>
-                        <button onclick="answerQuiz(1, 'b')" class="w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition font-bold" id="q1-opt-b">B) O atraso de fila é eliminado ($d_{queue} = 0$), pois o roteador retransmite mais rápido do que recebe.</button>
+                        <button onclick="answerQuiz(1, 'b')" class="w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition font-bold" id="q1-opt-b">B) O atraso de fila é eliminado (d<sub>queue</sub> = 0), pois o roteador retransmite mais rápido do que recebe.</button>
                         <button onclick="answerQuiz(1, 'c')" class="w-full text-left p-2.5 rounded border border-slate-200 hover:bg-slate-50 transition" id="q1-opt-c">C) O atraso de propagação dobra automaticamente.</button>
                     </div>
                     <p id="q1-feedback" class="text-[11px] font-bold hidden"></p>
@@ -1100,8 +1132,8 @@
                 totalTime: "5.15 s",
                 transTime: 5.0,
                 propTime: 0.15,
-                params: "F = 50 Mbits (1 pacote) | R = 10 Mbps | d = 30.000 km | s = 2x10^8 m/s",
-                desc: "<b>Cálculos Executados:</b><br>• Transmissão: d_trans = 50 Mb / 10 Mbps = <b>5,00 s</b><br>• Propagação: d_prop = 30.000.000 m / 2x10^8 m/s = <b>0,15 s</b><br>• Atraso Total: 5,00s + 0,15s = <b>5,15 s</b>",
+                params: "F = 50 Mbits (1 pacote) | R = 10 Mbps | d = 30.000 km | s = 2&times;10<sup>8</sup> m/s",
+                desc: "<b>Cálculos Executados:</b><br>&bull; Transmissão: <span class='math-formula'>d<sub>trans</sub> = <span class='fraction'><span class='numerator'>50 Mb</span><span class='denominator'>10 Mbps</span></span> = <b>5,00 s</b></span><br>&bull; Propagação: <span class='math-formula'>d<sub>prop</sub> = <span class='fraction'><span class='numerator'>30.000.000 m</span><span class='denominator'>2&times;10<sup>8</sup> m/s</span></span> = <b>0,15 s</b></span><br>&bull; Atraso Total: 5,00s + 0,15s = <b>5,15 s</b>",
                 takeaway: "Sem roteadores intermediários, o atraso de transmissão do arquivo inteiro domina o tempo total de resposta."
             },
             2: {
@@ -1110,8 +1142,8 @@
                 totalTime: "3.65 s",
                 transTime: 3.1,
                 propTime: 0.55,
-                params: "F = 30 Mbits (3 pkts de 10Mb) | Link1: 10Mbps (30k km) | Link2: 100Mbps (80k km)",
-                desc: "<b>Cálculos Executados:</b><br>• Pacote 3 sai da fonte em t = 3.0s<br>• Chega ao Roteador 1 em 3.15s (d_prop1 = 0,15s)<br>• Retransmissão no Link 2 (100Mbps): d_trans2 = 10Mb / 100Mbps = 0,10s<br>• Propagação no Link 2: d_prop2 = 80.000km / 200.000km/s = 0,40s<br>• Chegada ao Destino: 3,15s + 0,10s + 0,40s = <b>3,65 s</b>",
+                params: "F = 30 Mbits (3 pkts de 10Mb) | Link 1: 10Mbps (30k km) | Link 2: 100Mbps (80k km)",
+                desc: "<b>Cálculos Executados:</b><br>&bull; Pacote 3 sai da fonte em t = 3.0s<br>&bull; Chega ao Roteador 1 em 3.15s (<span class='math-formula'>d<sub>prop1</sub> = 0,15s</span>)<br>&bull; Retransmissão no Link 2 (100Mbps): <span class='math-formula'>d<sub>trans2</sub> = <span class='fraction'><span class='numerator'>10 Mb</span><span class='denominator'>100 Mbps</span></span> = 0,10s</span><br>&bull; Propagação no Link 2: <span class='math-formula'>d<sub>prop2</sub> = <span class='fraction'><span class='numerator'>80.000 km</span><span class='denominator'>200.000 km/s</span></span> = 0,40s</span><br>&bull; Chegada ao Destino: 3,15s + 0,10s + 0,40s = <b>3,65 s</b>",
                 takeaway: "Como R2 (100Mbps) > R1 (10Mbps), o roteador processa mais rápido do que recebe, eliminando totalmente a fila (d_queue = 0)!"
             },
             3: {
@@ -1121,7 +1153,7 @@
                 transTime: 7.0,
                 propTime: 0.45,
                 params: "F = 50 Mbits (5 pkts de 10Mb) | 3 Enlaces: 10 Mbps cada | d = 30.000 km cada",
-                desc: "<b>Fórmula do Pipelining Multi-salto:</b><br>d_total = (N * t_trans_p) + (k * d_prop) + ((k - 1) * t_trans_p)<br>• Onde N = 5 pacotes, k = 3 enlaces, t_trans_p = 1,0s, d_prop = 0,15s<br>• Cálculo: (5 * 1.0s) + (3 * 0.15s) + (2 * 1.0s) = 5.0s + 0.45s + 2.0s = <b>7,45 s</b>",
+                desc: "<b>Fórmula do Pipelining Multi-salto:</b><br><div class='my-1 border-l-2 border-indigo-400 pl-2 font-mono text-[11px] math-formula'>d<sub>total</sub> = (N &times; t<sub>trans_p</sub>) + (k &times; d<sub>prop</sub>) + ((k - 1) &times; t<sub>trans_p</sub>)</div>&bull; Onde N = 5 pacotes, k = 3 enlaces, t<sub>trans_p</sub> = 1,0s, d<sub>prop</sub> = 0,15s<br>&bull; Cálculo: (5 &times; 1.0s) + (3 &times; 0.15s) + (2 &times; 1.0s) = 5.0s + 0.45s + 2.0s = <b>7,45 s</b>",
                 takeaway: "O paralelismo do pipelining permite enviar o próximo pacote enquanto o roteador transmite o pacote anterior!"
             },
             4: {
@@ -1131,7 +1163,7 @@
                 transTime: 9.0,
                 propTime: 0.25,
                 params: "F = 50 Mbits (5 pkts de 10Mb) | 5 Enlaces: 10 Mbps cada | d = 10.000 km cada",
-                desc: "<b>Fórmula dos 5 Saltos:</b><br>• d_total = (5 * 1.0s) + (5 * 0.05s) + (4 * 1.0s) = 5.0s + 0.25s + 4.0s = <b>9,25 s</b><br>• Comparação com Q3: A distância física total caiu de 90.000 km para 50.000 km, porém o tempo aumentou de 7,45s para 9,25s!",
+                desc: "<b>Fórmula dos 5 Saltos:</b><br>&bull; <span class='math-formula'>d<sub>total</sub> = (5 &times; 1.0s) + (5 &times; 0.05s) + (4 &times; 1.0s) = 5.0s + 0.25s + 4.0s = <b>9,25 s</b></span><br>&bull; Comparação com Q3: A distância física total caiu de 90.000 km para 50.000 km, porém o tempo aumentou de 7,45s para 9,25s!",
                 takeaway: "A quantidade de saltos (store-and-forward em roteadores) tem peso maior no atraso total do que a distância física linear!"
             }
         };
@@ -1183,11 +1215,6 @@
                     </div>
                 </div>
             `;
-        }
-
-        // Hide Protocol Card
-        function hideProtocolCard() {
-            // Keep card visible or gently auto-hide if needed, but let's leave last inspected protocol visible for good UX!
         }
 
         // Initialize Module 1 Layer Selector
@@ -1312,7 +1339,7 @@
             document.getElementById('scen-tag').innerText = data.tag;
             document.getElementById('scen-result-time').innerText = data.totalTime;
             document.getElementById('scen-title').innerText = data.title;
-            document.getElementById('scen-params').innerText = data.params;
+            document.getElementById('scen-params').innerHTML = data.params;
             document.getElementById('scen-description').innerHTML = data.desc;
             document.getElementById('scen-takeaway').innerText = data.takeaway;
 
@@ -1341,8 +1368,8 @@
 
             document.getElementById('http-explanation').innerHTML = `
                 Para baixar <strong>${N} objetos</strong> com latência de ${rttMs}ms:<br>
-                • O modelo não persistente repete o handshake TCP ${N} vezes, acumulando uma penalidade de <strong>${(N * 2 * rttSec).toFixed(2)}s</strong> só de sobrecarga de rede.<br>
-                • O modelo persistente reutiliza a conexão aberta, economizando <strong>${(nonPersistent - persistent).toFixed(2)}s</strong> de tempo total de carregamento.
+                &bull; O modelo não persistente repete o handshake TCP ${N} vezes, acumulando uma penalidade de <strong>${(N * 2 * rttSec).toFixed(2)}s</strong> só de sobrecarga de rede.<br>
+                &bull; O modelo persistente reutiliza a conexão aberta, economizando <strong>${(nonPersistent - persistent).toFixed(2)}s</strong> de tempo total de carregamento.
             `;
         }
 
